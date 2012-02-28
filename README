@@ -1,4 +1,5 @@
-Pinboard is an attempt to create a simple "pinterest"-like web application using the
+opinit (pronounced "open-it" and formerly known as "Pinboard")
+ is an attempt to create a simple "pinterest"-like web application using the
 Play framework. There's no real attempt to handle scale here - if you're looking to 
 create a pinterest like site with this to handle millions of users along with thousands of
 pins, then you'll want to look elsewhere. 
@@ -8,7 +9,7 @@ The goal here was to create a simple MVC-based platform that allows users to:
 * create their own boards
 * pin items to a board
 
-Additionally, pinboard is a first of sorts for me. It's my:
+Additionally, opinit is a first of sorts for me. It's my:
 * First open source project
 * First project on github
 * First project using the Play framework
@@ -42,3 +43,4 @@ Improvements:
 History:
 2012-02-25 - Initial repo created on github. Initial project created.
 2012-02-26 - Add pins, additional views and controllers
+2012-02-27 - renamed it to "opinit" per a suggestion from my coworker Nobu at Gilt
