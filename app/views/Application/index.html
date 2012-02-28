@@ -1,4 +1,17 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+<h1>Welcome to opinit!</h1>
+
+You can:<p>
+<ul>
+    <li>#{a @Account.register()}Register for a profile#{/a}</li>
+</ul>
+
+<h2>Available Profiles</h2>
+<ul>
+#{list items:users, as: 'user'}
+    <li>#{a @User.show(user.username)}${user.username}#{/a}</li>
+#{/list}
+</ul>
+

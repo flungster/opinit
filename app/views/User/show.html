@@ -2,7 +2,7 @@
 #{if user}
     #{set title:user.username + ' boards' /}
     <h1>${user.username} boards</h1>
-    #{a @Pin.create(user.username)}Pin it#{/a} | #{a @Board.create(user.username)} Create a new board#{/a}
+    #{a @Application.index()}Home#{/a} | #{a @Pin.create(user.username)}Pin it#{/a} | #{a @Board.create(user.username)} Create a new board#{/a}
     </hr>
     <h2>Available boards</h2>
     #{list items:boards, as: 'board'}

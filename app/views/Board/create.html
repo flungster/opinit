@@ -1,6 +1,6 @@
 #{extends 'main.html' /}
 
-#{a @User.show(username)}Profile#{/a}
+#{a @Application.index()}Home#{/a} | #{a @User.show(username)}Profile#{/a}
 
 <h1>Create board</h1>
 #{ifErrors}

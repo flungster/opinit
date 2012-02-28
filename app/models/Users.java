@@ -78,4 +78,5 @@ public class Users extends GenericModel {
     public static Users findByUsername(String username) {
 	return find("byUsername", username).first();
     }
+
 }
