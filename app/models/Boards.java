@@ -67,6 +67,10 @@ public class Boards extends GenericModel {
 	return find("byUser", user).fetch();
     }
 
+    public static List<Boards> findByUsername(String username) {
+	return find("select b from Boards b, Users u where b.user = u and u.username = ?", username).fetch();
+    }
+
     public static Boards findByUsernameAndBoardId(@Required String username, @Required Long boardId) {
 	return find("select b from Boards b, Users u where b.id = ? and b.user = u and u.username = ?", boardId, username).first();
     }

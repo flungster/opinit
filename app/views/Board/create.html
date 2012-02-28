@@ -1,5 +1,7 @@
 #{extends 'main.html' /}
 
+#{a @User.show(username)}Profile#{/a}
+
 <h1>Create board</h1>
 #{ifErrors}
 <p class="create_board_error">
@@ -9,7 +11,7 @@
 
 #{form @Board.createBoard(username)}
     <p>
-	<label for="title">Title:: </label>
+	<label for="title">Title: </label>
 	<input type="text" name="title" id="title" />
     </p>
     <p>

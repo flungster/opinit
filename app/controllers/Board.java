@@ -1,8 +1,8 @@
 package controllers;
 
 import play.*;
-import play.mvc.*;
 import play.data.validation.*;
+import play.mvc.*;
 
 import java.util.*;
 
@@ -31,6 +31,7 @@ public class Board extends Controller {
      */
     public static void createBoard(String username, @Required String title) {
 	if (validation.hasErrors()) {
+	    validation.keep();
 	    create(username);
 	}
 

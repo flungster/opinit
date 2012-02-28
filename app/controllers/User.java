@@ -17,6 +17,7 @@ public class User extends Controller {
 	    // find the boards belonging to this user
 	    boards = Boards.findByUser(user);
 	}
+	notFoundIfNull(user);
 	render(user, boards);
     }
 

@@ -1,10 +1,12 @@
 #{extends 'main.html' /}
 #{if user}
-#{set title:user.username + ' boards' /}
+    #{set title:user.username + ' boards' /}
     <h1>${user.username} boards</h1>
+    #{a @Pin.create(user.username)}Pin it#{/a} | #{a @Board.create(user.username)} Create a new board#{/a}
     </hr>
+    <h2>Available boards</h2>
     #{list items:boards, as: 'board'}
-        <h2>${board.title}</h2>
+        <h3>#{a @Board.show(user.username, board.urlKey)} ${board.title} #{/a}</h3>
 
 	</hr>
     #{/list}

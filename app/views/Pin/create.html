@@ -1,0 +1,36 @@
+#{extends 'main.html' /}
+
+<h1>Pin it!</h1>
+
+#{ifErrors}
+<p class="create_pin_error">
+    All fields are required!
+</p>
+#{/ifErrors}
+
+<hr/>
+#{form @Pin.createPin(username)}
+    <p>
+	<label for="boardUrlKey">Select Board:</label>
+	<select name="boardUrlKey">
+	    #{list items:boards, as: 'board'}
+	    <option value="${board.urlKey}">${board.title}</option>
+	    #{/list}
+	</select>
+    </p>
+    <p>
+	<label for="url">URL: </label>
+	<input type="text" name="url" id="url" />
+    </p>
+    <p>
+	<label for="description">Description: </label>
+	<input type="text" name="description" id="description" />
+    </p>
+    <p>
+	<label for="image_url">Image URL: </label>
+	<input type="text" name="image_url" id="image_url" />
+    </p>
+    <p>
+	<input type="submit" value="Pin it!" />
+    </p>
+#{/form}

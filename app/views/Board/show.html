@@ -3,7 +3,9 @@
 
 #{if board}
 
+    #{a @User.show(username)}Profile#{/a} | #{a @Pin.create(username)}Pin it#{/a}
     <h1>${board.title}</h1>
+    <hr/>
     <h2>Pins</h2>
     </hr>
     #{list items:pins, as: 'pin'} 
