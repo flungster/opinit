@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{if user}
+#{set title:user.username + ' boards' /}
+    <h1>${user.username} boards</h1>
+    </hr>
+    #{list items:boards, as: 'board'}
+        <h2>${board.title}</h2>
+
+	</hr>
+    #{/list}
+
+#{/if}
+#{else}
+    <h2>The user does not exist</h2>
+#{/else}
+

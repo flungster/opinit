@@ -1,0 +1,17 @@
+Users
+ - id
+ - email
+ - password
+ - username
+ 
+Boards
+ - user
+
+Pin (for now only support images)
+ - board_id
+ - url
+ - image url
+ - parent_pin
+
+User_Followers
+  

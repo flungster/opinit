@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:username /}
+
+#{if board}
+
+    <h1>${board.title}</h1>
+    <h2>Pins</h2>
+    </hr>
+    #{list items:pins, as: 'pin'} 
+        <h2>${pin.description}</h2>
+        <p>${pin.url}
+        <p>${pin.image_url}
+    </hr>
+    #{/list}
+
+#{/if}
+#{else}
+    <h2>Board does not exist</h2>
+#{/else}
+

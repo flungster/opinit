@@ -1,0 +1,44 @@
+Pinboard is an attempt to create a simple "pinterest"-like web application using the
+Play framework. There's no real attempt to handle scale here - if you're looking to 
+create a pinterest like site with this to handle millions of users along with thousands of
+pins, then you'll want to look elsewhere. 
+
+The goal here was to create a simple MVC-based platform that allows users to:
+* create accounts on the site
+* create their own boards
+* pin items to a board
+
+Additionally, pinboard is a first of sorts for me. It's my:
+* First open source project
+* First project on github
+* First project using the Play framework
+
+You'll forgive me if you don't like things here or if you think I'm being simplistic. This
+is more a learning exercise for me than an attempt to build something usable for others.
+
+If you have any questions, please feel free to reach out to me here on github.
+-Felix
+
+Configuration Notes:
+The current version of this application uses postgres for a persistent store. If you plan
+on using a different database then you'll want to edit the conf/application.yml file to point
+to the respective database or in-memory model.
+
+How to run:
+1. Make sure you have the play framework installed
+2. Go to the directory you cloned the project into and type "play run"
+3. The web app will run on http://localhost:9000
+
+How to run the tests:
+1. Make sure you have the play framework installed
+2. Go to the directory you cloned the project into and type "play test"
+3. You can execute tests by going to http://localhost:9000/@tests
+
+Improvements:
+1. Consider going to service model (service tier acting as intermediate layer between data and front-end)
+2. Replace postgres with mongodb given how many users/boards/pins one could have
+
+
+History:
+2012-02-25 - Initial repo created on github. Initial project created.
+2012-02-26 - Add pins, additional views and controllers
