@@ -1,0 +1,19 @@
+#{extends 'main.html' /}
+#{set title:username /}
+
+#{if pin}
+
+    #{a @Application.index()}Home#{/a} | #{a @User.show(username)}Profile#{/a} | #{a @Pin.create(username)}Pin it#{/a}
+    <h1>${pin.description}</h1>
+    <hr/>
+    <p>${pin.url}
+    <p>${pin.image_url}
+    <hr>
+    #{list items:imgLinks, as: 'imgLink'}
+        <img src="${imgLink}"><p>
+    #{/list}
+
+#{/if}
+#{else}
+    <h2>Pin does not exist</h2>
+#{/else}

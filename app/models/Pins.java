@@ -66,4 +66,8 @@ public class Pins extends GenericModel {
     public static List<Pins> findByUsernameAndBoardUrlKey(@Required String username, @Required String boardUrlKey) {
 	return find("select p from Pins p, Boards b, Users u where p.board = b and b.urlKey = ? and b.user = u and u.username = ?", boardUrlKey, username).fetch();
     }
+
+    public static Pins findByUsernameAndId(String username, Long pinId) {
+	return find("select p from Pins p, Users u where p.id = ? and p.user = u and u.username = ?", pinId, username).first();
+    }
 }

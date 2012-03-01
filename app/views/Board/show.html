@@ -9,7 +9,7 @@
     <h2>Pins</h2>
     </hr>
     #{list items:pins, as: 'pin'} 
-        <h2>${pin.description}</h2>
+        <h2>#{a @Pin.show(username, pin.id)}${pin.description}#{/a}</h2>
         <p>${pin.url}
         <p>${pin.image_url}
     </hr>

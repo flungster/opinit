@@ -19,6 +19,7 @@ GET     /{username}/board/{urlKey}  		Board.show
 # Pin pages
 GET     /{username}/pin/?			Pin.create
 POST	/{username}/pin				Pin.createPin
+GET	/{username}/pin/{pinId}			Pin.show
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

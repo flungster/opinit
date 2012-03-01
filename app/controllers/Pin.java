@@ -7,6 +7,7 @@ import play.mvc.*;
 import java.util.*;
 
 import models.*;
+import services.pinning.*;
 
 public class Pin extends Controller {
     
@@ -60,7 +61,9 @@ public class Pin extends Controller {
     /**
      * A request to show a pin
      */
-    public static void show() {
-
+    public static void show(String username, Long pinId) {
+	Pins pin = Pins.findByUsernameAndId(username, pinId);
+	List<String> imgLinks = Pinning.fetchImageLinks(pin.url);
+	render(username, pin, imgLinks);
     }
  }
